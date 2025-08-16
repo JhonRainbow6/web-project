@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.landing-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.notification-tab {
+    background-color: #ffcc00;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.frame {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+.vector {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.text-wrapper {
+    font-size: 16px;
+    color: #333;
+}
+
+.about-you {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.friends {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.deals-of-today {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.library {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.text-wrapper-3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-wrapper-10,
+.text-wrapper-11,
+.text-wrapper-12 {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.button,
+.button-2 {
+    cursor: pointer;
+}
+
+.ellipse {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.overlap-group,
+.overlap {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.navigation-bar {
+    width: 100%;
+    margin-top: 20px;
+}

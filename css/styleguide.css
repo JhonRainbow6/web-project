@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.text-wrapper, .text-wrapper-2, .text-wrapper-3, .text-wrapper-4, .text-wrapper-5, .text-wrapper-6, .text-wrapper-7, .text-wrapper-8, .text-wrapper-9, .text-wrapper-10, .text-wrapper-11, .text-wrapper-12 {
+    color: #333;
+}
+
+.button, .button-2 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover, .button-2:hover {
+    background-color: #0056b3;
+}
+
+.frame, .frame-2, .frame-3, .frame-4, .frame-5, .frame-6, .frame-7, .frame-8, .frame-9, .frame-10, .frame-11 {
+    display: flex;
+    align-items: center;
+}
+
+.ellipse {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.deals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.overlap-group, .overlap, .overlap-2, .overlap-3, .overlap-4 {
+    position: relative;
+}
+
+.image-wrapper, .img-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.navigation-bar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
