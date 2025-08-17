@@ -17,11 +17,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  position: fixed;
   left: 20px;
-  top: 300px;
+  top: 50%;
   transform: translateY(-50%);
-  height: 500px;  /* Added fixed height */
+  height: 80vh;  /* Altura ajustada al 80% de la ventana */
 }
 
 .navigation-bar ul {
@@ -60,13 +60,57 @@
 .main-grid {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  grid-template-rows: repeat(2, minmax(287.5px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  grid-template-areas:
-    "about-you   library     friends"
-    "deals-of-today whats-new   ubisoft-plus";
   margin-left: 75px;
+}
+
+@media screen and (max-width: 1920px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "about-you library"
+      "friends whats-new"
+      "deals-of-today ubisoft-plus";
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about-you"
+      "library"
+      "friends"
+      "whats-new"
+      "deals-of-today"
+      "ubisoft-plus";
+    margin-left: 20px;
+  }
+
+  .navigation-bar {
+    width: 60px;
+    left: 10px;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .user_icon {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .landing-page {
+    padding: 10px;
+  }
+
+  .navigation-bar {
+    width: 50px;
+    height: 400px;
+  }
 }
 
 .about-you { grid-area: about-you; }
@@ -81,8 +125,12 @@
   border-radius: 15px;
   padding: 20px;
   color: white;
-  min-height: 200px; 
-  min-width: 200px;  
+  min-height: 300px;  
+  min-width: 300px;   
+  height: auto;      
+margin-left: 20px; /* Espacio entre las cajas */
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Incluye padding en el cálculo del tamaño */
 }
 
 .text-wrapper-3, .text-wrapper-7, .text-wrapper-11, .text-wrapper-10, .text-wrapper-12 {
@@ -92,4 +140,3 @@
   color: #FFFFFF;
 }
 
-/* Add other styles from your original design */
