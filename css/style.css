@@ -21,7 +21,7 @@
   left: 20px;
   top: 300px;
   transform: translateY(-50%);
-  height: auto;
+  height: 500px;  /* Added fixed height */
 }
 
 .navigation-bar ul {
@@ -41,6 +41,21 @@
   text-decoration: none;
   font-size: 1.2rem;
 }
+
+.icon {
+  font-size: 1.9rem;
+  color: white;
+}
+
+.user_icon {
+  font-size: 2.5rem;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 .main-grid {
   flex-grow: 1;
