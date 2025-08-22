@@ -1,0 +1,126 @@
+/* Estilos generales */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/apps.63170.14246812968525544.2de1e6fd-94a7-4291-88ea-6803f279b4ed.jpg');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000000;
+}
+
+/* Estilos para encabezado */
+header {
+    background-color: #464444;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Estilos para contenido principal */
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    margin-left: 120px; /* Espacio para la barra de navegación */
+}
+
+/* Estilos para formulario de busqueda */
+#search-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el campo de entrada de texto del formulario */
+#game-title {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilos para boton de busqueda */
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo para el boton de busqueda al pasar el cursor */
+button:hover {
+    background-color: #555;
+}
+
+/* Estilo para el mensaje de carga */
+.loading-message {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+    grid-column: 1 / -1; /* Hace que ocupe todas las columnas del grid */
+}
+.no-found-message{
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+    grid-column: 1 / -1; /* Hace que ocupe todas las columnas del grid */
+}
+
+/* Estilos para el contenedor de resultados */
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.5rem;
+}
+
+/* Estilos para cada tarjeta de oferta individual */
+.deal {
+    background: linear-gradient(145deg, #fdfdfd, #f1f1f1); /* Gradiente sutil para dar textura */
+    border: 1px solid #e1e1e1;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transicion suave */
+}
+
+.deal:hover {
+    transform: translateY(-4px); /* Eleva la tarjeta al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Estilos para la imagen dentro de una tarjeta de oferta */
+.deal img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1px;
+}
+
+/* Estilos para el título del juego en la tarjeta */
+.deal h3 {
+    margin: 0 0 0.5rem 0;
+    color: #000; 
+}
+
+/* Estilos para el listado de precio en la tarjeta*/
+.deal p {
+    margin: 0;
+    color: #000; 
+    font-weight: bold;
+}
+
+/* Estilos para lista de tiendas quitando marcadores */
+.deal ul {
+    list-style-type: none; 
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.deal li {
+    margin-bottom: 0.25rem; /* Agrega un pequeño espacio entre los nombres de las tiendas */
+}
