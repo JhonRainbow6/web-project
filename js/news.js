@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const newsContainer = document.getElementById('news-container');
-    const apiKey = 'a4f4b353ab2e461dba243dabcf7b4089';
+    // Reemplaza con tu API key de NewsAPI. Puedes obtener una gratis en https://newsapi.org/
+    const apiKey = 'c468383cdb1d45289e7586f57f420423'; 
 
     async function fetchNews() {
-        const url = `https://api.rawg.io/api/games?key=${apiKey}&publishers=918&ordering=-updated&page_size=30`;
+        const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}`;
         
         try {
             const response = await fetch(url);
@@ -11,28 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            displayNews(data.results); 
+            displayNews(data.articles); 
         } catch (error) {
-            console.error('Error fetching news from RAWG:', error);
+            console.error('Error fetching news from NewsAPI:', error);
             newsContainer.innerHTML = '<p>No se pudieron cargar las noticias. Inténtalo de nuevo más tarde.</p>';
         }
     }
 
-    function displayNews(games) {
+    function displayNews(articles) {
         newsContainer.innerHTML = '';
-        if (!games || games.length === 0) {
+        if (!articles || articles.length === 0) {
             newsContainer.innerHTML = '<p>No hay noticias disponibles en este momento.</p>';
             return;
         }
 
-        games.forEach(game => {
+        articles.forEach(article => {
+            if (!article.urlToImage || !article.title) {
+                return; // Omitir artículos sin imagen o título
+            }
             const articleElement = document.createElement('div');
             articleElement.classList.add('news-article');
 
             articleElement.innerHTML = `
-                <img src="${game.background_image}" alt="${game.name}">
-                <h3>${game.name}</h3>
-                <a href="https://rawg.io/games/${game.slug}" target="_blank" rel="noopener noreferrer">Ver detalles</a>
+                <img src="${article.urlToImage}" alt="${article.title}">
+                <h3>${article.title}</h3>
+                <a href="${article.url}" target="_blank" rel="noopener noreferrer">Ver detalles</a>
             `;
 
             newsContainer.appendChild(articleElement);
