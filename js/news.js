@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const newsContainer = document.getElementById('news-container');
-    const apiKey = 'a4f4b353ab2e461dba243dabcf7b4089';
+    const apiKey = API_KEY;
 
     async function fetchNews() {
         const url = `https://api.rawg.io/api/games?key=${apiKey}&publishers=918&ordering=-updated&page_size=30`;
