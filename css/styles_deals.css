@@ -80,18 +80,44 @@ button:hover {
 
 /* Estilos para cada tarjeta de oferta individual */
 .deal {
-    background: linear-gradient(145deg, #fdfdfd, #f1f1f1); /* Gradiente sutil para dar textura */
-    border: 1px solid #e1e1e1;
-    border-radius: 8px; /* Bordes redondeados */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0d1a2e, #1d2c4d);
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    border-radius: 12px;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* profundidad */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transicion suave */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.deal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent 20%,
+        rgba(173, 216, 230, 0.4) 45%,
+        rgba(173, 216, 230, 0.4) 55%,
+        transparent 80%
+    );
+    transform: skewX(-25deg);
+    transition: left 0.7s ease-in-out;
+    z-index: 2;
+}
+
+.deal:hover::before {
+    left: 150%;
 }
 
 .deal:hover {
-    transform: translateY(-4px); /* Eleva la tarjeta al pasar el cursor */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
 }
 
 /* Estilos para la imagen dentro de una tarjeta de oferta */
@@ -99,19 +125,25 @@ button:hover {
     max-width: 100%;
     height: auto;
     margin-bottom: 1px;
+    position: relative;
+    z-index: 3;
 }
 
 /* Estilos para el título del juego en la tarjeta */
 .deal h3 {
     margin: 0 0 0.5rem 0;
-    color: #000; 
+    color: #ffffff; 
+    position: relative;
+    z-index: 3;
 }
 
 /* Estilos para el listado de precio en la tarjeta*/
 .deal p {
     margin: 0;
-    color: #000; 
+    color: #e0e0e0; 
     font-weight: bold;
+    position: relative;
+    z-index: 3;
 }
 
 /* Estilos para lista de tiendas quitando marcadores */
@@ -119,8 +151,11 @@ button:hover {
     list-style-type: none; 
     padding: 0;
     margin-top: 0.5rem;
+    position: relative;
+    z-index: 3;
 }
 
 .deal li {
     margin-bottom: 0.25rem; /* Agrega un pequeño espacio entre los nombres de las tiendas */
+    color: #cccccc;
 }
