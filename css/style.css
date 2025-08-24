@@ -11,7 +11,7 @@
 
 .navigation-bar {
   width: 80px;
-  background: linear-gradient(180deg, #4c3a5f 0%, #2c213d 100%);
+  background: linear-gradient(180deg, #151365 0%, #000000 135%);
   border-radius: 15px;
   padding: 20px 0;
   display: flex;
@@ -75,20 +75,14 @@
 .main-grid {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   margin-left: 75px;
-}
-
-@media screen and (max-width: 1920px) {
-  .main-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-      "about-you friends whats-new whats-new"
-      "library library deals-of-today deals-of-today"
-      "library library ubisoft-plus ubisoft-plus";
-  }
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "about-you friends whats-new whats-new"
+    "library library deals-of-today deals-of-today"
+    "library library ubisoft-plus ubisoft-plus";
 }
 
 @media screen and (max-width: 1080px) {
@@ -157,7 +151,7 @@
 
 /* Fondo solo para las tarjetas sin imagen */
 .about-you, .friends {
-  background: linear-gradient(135deg, #0d1a2e, #1d2c4d);
+  background: linear-gradient(180deg, #151365 0%, #000000 135%);
 }
 
 /* Estilos comunes para TODAS las tarjetas */
