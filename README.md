@@ -1,17 +1,29 @@
 # Web Project
 
 ## Overview
-This project is a web application that provides a user-friendly interface for displaying various features, including a landing page, user information, friends list, deals of the day, and a library section.
+This project is a web dashboard that provides a user-friendly interface for displaying various features in this version for now including a landing page, deals of the day and a news section. More for come
 
 ## Project Structure
 ```
 web-project
+├── assets
+│   ├── Images             # Componets use in the sections of the page
 ├── css
 │   ├── globals.css        # Global styles for the entire project
 │   ├── style.css          # Specific styles for main components
-│   └── styleguide.css     # Design system styles and reusable components
+│   ├── navegation.css     # Template styles for add future pages
+│   ├── news.css           # Specific styles for news page components
+│   ├── styleguide.css     # Design system styles and reusable components
+│   └── styles_deals.css   # Specific styles for deals page components
 ├── js
-│   └── script.js          # JavaScript for interactivity and DOM manipulation
+│   ├── Deals_script.js    # JavaScript for API cosume in deals Page
+│   ├── news.js            # JavaScript for API cosume in News Page (API remove)
+│   └── script.js          # JavaScript for interactivity and DOM manipulation (Empty)
+├── Pages
+│   ├── Deals_script.html  # HTML for ubisoft deals
+│   ├── navegation.html    # Template page for add components
+│   ├── News.html          # Static HTML page of news
+│   └── Profile.html       # Work in progress
 ├── index.html             # Main HTML document
 └── README.md              # Project documentation
 ```
@@ -20,13 +32,15 @@ web-project
 1. Clone the repository to your local machine.
 2. Open the `index.html` file in your web browser to view the application.
 3. Ensure that all CSS and JavaScript files are correctly linked in the `index.html`.
+4. Make sure you have "Live Server" extension in your VS Code.
+5. Click “Go Live” at the bottom right of VS and run the project.
 
-## Features
+## Features Features of this Version
+- **Navegation Bar**: Navegation tool for users.
 - **Landing Page**: A welcoming interface for users.
-- **User Information**: Displays player name and level.
-- **Friends List**: Shows online friends and their status.
-- **Deals of the Day**: Highlights special offers on games.
-- **Library Section**: Displays the user's game library.
+- **News Section**: Shows static news about Ubisoft.
+- **Deals of the Day**: Highlights special offers on Ubisoft games.
+- **Ubisoft+**: Section linked to the official Ubisoft+.
 
 ## Usage Guidelines
 - Modify the CSS files to change the appearance of the web application.
