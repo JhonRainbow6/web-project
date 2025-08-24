@@ -1,5 +1,6 @@
 # Web Project
-<img width="1200" height="630"  alt="imagen" src="https://github.com/user-attachments/assets/17c14157-2187-41fd-a834-62662a024929" />
+<img  width="1200" height="630" alt="Captura de pantalla 2025-08-24 153410" src="https://github.com/user-attachments/assets/f0dfe2ee-7fed-4ea2-860d-8bd41b58afb8" />
+
 
 ## Overview
 This project is a web dashboard that provides a user-friendly interface for displaying various features in this version for now including a landing page, deals of the day and a news section. More for come
