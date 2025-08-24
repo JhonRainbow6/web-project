@@ -1,5 +1,5 @@
 # Web Dashboard Project
-<img  width="1200" height="630" alt="Captura de pantalla 2025-08-24 153410" src="https://github.com/user-attachments/assets/f0dfe2ee-7fed-4ea2-860d-8bd41b58afb8" />
+<img width="1200" height="630"  alt="imagen" src="https://github.com/user-attachments/assets/d6f0793b-f7cc-4267-b373-a886049773fa" />
 
 
 ## Overview
