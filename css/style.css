@@ -129,14 +129,38 @@
 }
 
 .about-you { grid-area: about-you; }
-.library { grid-area: library; }
+.library { grid-area: library; 
+  background: linear-gradient(135deg, rgba(13, 26, 46, 0.6), rgba(29, 44, 77, 0.6)), url('../Assets/heroBackImage_desktop.webp');
+  background-size: cover;
+  background-position: center;
+}
 .friends { grid-area: friends; }
-.deals-of-today { grid-area: deals-of-today; }
-.whats-new { grid-area: whats-new; }
-.ubisoft-plus { grid-area: ubisoft-plus; }
+.deals-of-today { 
+  grid-area: deals-of-today;
+  background: linear-gradient(135deg, rgba(13, 26, 46, 0.6), rgba(29, 44, 77, 0.6)), url('../Assets/BrandNewsArticle_BlackFriday2024_960x540.png');
+  background-size: cover;
+  background-position: center;
+}
+.whats-new { 
+  grid-area: whats-new; 
+  background: linear-gradient(135deg, rgba(13, 26, 46, 0.6), rgba(29, 44, 77, 0.6)), url('../Assets/Ubi-Thumbnail_EEC-EEC-Ubisoft__NewSkus_Dec23_960x540.avif');
+  background-size: cover;
+  background-position: center;
+}
+.ubisoft-plus { 
+  grid-area: ubisoft-plus; 
+  background: linear-gradient(135deg, rgba(13, 26, 46, 0.6), rgba(29, 44, 77, 0.6)), url('../Assets/handler.php_.png');
+  background-size: cover;
+  background-position: center;
+}
 
-.about-you, .library, .friends, .deals-of-today,  .whats-new, .ubisoft-plus {
+/* Fondo solo para las tarjetas sin imagen */
+.about-you, .friends {
   background: linear-gradient(135deg, #0d1a2e, #1d2c4d);
+}
+
+/* Estilos comunes para TODAS las tarjetas */
+.about-you, .library, .friends, .deals-of-today,  .whats-new, .ubisoft-plus {
   border: 1px solid rgba(100, 180, 255, 0.3);
   border-radius: 15px;
   padding: 20px;
@@ -151,26 +175,6 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.News-image {
-  width: 100%;
-  height: 150px;
-  background-image: url('../Assets/Ubi-Thumbnail_EEC-EEC-Ubisoft__NewSkus_Dec23_960x540.avif');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 20px;
-}
-
-.ubisoft-logo {
-  width: 80%;
-  height: 200px;
-  background-image: url('../Assets/handler.php_.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 20px;
 }
 
 /* Hover effects for the cards */
