@@ -82,11 +82,12 @@
 
 @media screen and (max-width: 1920px) {
   .main-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
-      "about-you library"
-      "friends deals-of-today"
-      "whats-new ubisoft-plus";
+      "about-you friends whats-new whats-new"
+      "library library deals-of-today deals-of-today"
+      "library library ubisoft-plus ubisoft-plus";
   }
 }
 
